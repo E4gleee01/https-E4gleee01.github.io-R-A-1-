@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rennan & Andressa 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Botão para tocar/parar música -->
+  <button onclick="tocarOuParar()" class="botao-musica">🎵 Tocar Música</button>
+  <audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Foto de capa com texto -->
+  <section class="foto-capa-quadrada">
+    <img src="fundo-texto.jpg" alt="Foto de fundo do texto" />
+    <div class="texto-em-cima">
+      <h1>Rennan & Andressa 💖</h1>
+      <p>Desde 01/01/2025</p>
+    </div>
+  </section>
+
+  <!-- Contador de tempo -->
+  <section class="contador">
+    <h2>Eu te amo há:</h2>
+    <div id="tempo">
+      <span id="meses"></span> meses,
+      <span id="dias"></span> dias,
+      <span id="horas"></span> horas,
+      <span id="minutos"></span> minutos e
+      <span id="segundos"></span> segundos 💞
+    </div>
+  </section>
+
+  <!-- Carrossel de fotos -->
+  <section class="carrossel">
+    <h2>Nossos Momentos</h2>
+    <div class="fotos">
+      <img src="foto2.jpg" alt="Momento 1" onclick="abrirImagem(this)" />
+      <img src="foto3.jpg" alt="Momento 2" onclick="abrirImagem(this)" />
+      <img src="foto1.jpg" alt="Momento 3" onclick="abrirImagem(this)" />
+      <img src="foto6.jpg" alt="Momento 4" onclick="abrirImagem(this)" />
+      <img src="foto5.jpg" alt="Momento 5" onclick="abrirImagem(this)" />
+      <div class="foto-com-mensagem">
+        <img src="foto4.jpg" alt="Mensagem especial" onclick="abrirImagem(this)" />
+        <p>Você é meu mundo 💘</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vídeos -->
+  <section class="video">
+    <h2>Nosso vídeo 💑</h2>
+    <div class="videos-scroll">
+      <video controls width="300">
+        <source src="video01.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+      <video controls width="300">
+        <source src="VIDKKKK.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+  </section>
+
+  <section class="video">
+    <h2>Spa com namoradaaa</h2>
+    <div class="videos-scroll">
+      <video controls width="300">
+        <source src="VIDSKIN.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+      <video controls width="300">
+        <source src="VIDP.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+  </section>
+
+  <!-- Popup para ampliar imagem -->
+  <div id="popup" class="popup" onclick="fecharImagem()">
+    <img id="imagem-ampliada" src="" alt="Imagem ampliada" />
+  </div>
+
+  <!-- Botão principal da Aventurinha -->
+  <button id="btnAbrirAventurinha" class="botao-aventurinha">Clique para a Aventurinhaaaa! 🎒✨</button>
+
+  <!-- Modal da Aventurinha -->
+  <div id="modalAventurinha" class="modal" style="display: none;">
+    <div class="modal-content">
+      <button id="btnMostrarConteudo" class="botao-aventurinha">Mostrar foto e vídeo</button>
+      <div id="conteudoAventurinha" style="display: none; margin-top: 20px; text-align: center;">
+        <h2>Aventurinhaaaa!</h2>
+        <img src="FOTOAVENTURINHAAA.jpg" alt="Foto da Aventurinha" class="foto-aventura" />
+        <video controls width="400" class="video-aventura">
+          <source src="VIDAVENTURINHAAA.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+      <button id="btnFecharModal" class="botao-aventurinha" style="margin-top: 20px; background-color: #c62828;">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
